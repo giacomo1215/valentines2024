@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For *** INSERT NAME HERE ***</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital@1&family=Protest+Riot&display=swap" rel="stylesheet">
+
+    <style>
+        *
+        {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Protest Riot', sans-serif;
+        }
+        .home
+        {
+            height: 100vh;
+            background-image: url('https://i.giphy.com/11fIOE3vkIPdIY.webp');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 1rem;
+        }
+        .bianco
+        {
+            color: white;
+            text-decoration: none;
+        }
+
+        .bianco a
+        {
+            color: white;
+            text-decoration: underline;
+        }
+
+        .testo
+        {
+            color: white;
+            text-shadow: 0px 2px 4px #000000;
+            font-size: 3rem;
+            text-align: center;
+        }
+        .testo-bottoni
+        {
+            color: white;
+            text-shadow: 0px 2px 4px #000000;
+            font-size: 2rem;
+            padding: 2rem 4rem;
+            margin: 1rem;
+            border: none;
+            border-radius: 1rem;
+            cursor: pointer;
+            transition: 0.3s;
+            box-shadow: 0px 2px 4px #000000;    
+        }
+        .si
+        {
+            background-color: green;
+        }
+        .no
+        {
+
+            background-color: #b02d2d;
+        }
+        .container
+        {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .bottom
+        {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 1rem;
+            background-color: rgba(0, 0, 0, 0.5);
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="home">
+        <h1 class="testo">
+            <span style="font-size: 2rem;">Do you want to be</span><br />My Valentine?<br />
+            🥺<br />
+            👉🏼👈🏼
+        </h1>
+        <div class="container">
+            <button type="button" class="testo-bottoni si" style="display: block">Yes ❤️</button>
+            <button type="button" class="testo-bottoni no" style="display: block">No 🥺</button>
+        </div>
+        
+        <div class="bottom">
+            <h5 class="bianco">
+                Made with ❤️ by <a class="bianco" href="https://www.instagram.com/giacomo1215/">Giacomo Giorgi</a>
+            </h5>
+        </div>
+    </div>
+
+    <script>
+        document.querySelector('.no').addEventListener('click', function() 
+        {
+            this.style.position = 'absolute';
+            this.style.top = Math.random() * 100 + 'vh';
+            this.style.left = Math.random() * 100 + 'vw';
+        });
+        document.querySelector('.si').addEventListener('click', function() 
+        {
+            let gif = 'https://i.giphy.com/ANYZLuQ59mi64.webp';
+            document.querySelector('.home').style.backgroundImage = `url(${gif})`;
+            document.querySelector('.testo').innerText = 'See you on the 14th! ❤️';
+            document.querySelector('.no').style.display = 'none';
+            document.querySelector('.si').style.display = 'none';
+        });
+    </script>
+
+</body>
+</html>
